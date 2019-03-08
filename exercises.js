@@ -26,7 +26,7 @@
  * The function will take the str parameter representing the amount of minutes being passed in and
  * return the number of hours and minutes. Seperate the number of hours
  * and minutes with a colon
- * @param {number} str
+ * @param {number} num
  * @return {string} as hours:minutes
  * ie: 68 => 1:8
  */
