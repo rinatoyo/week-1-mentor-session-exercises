@@ -94,6 +94,16 @@ console.log(vowelCount('steak'));
  * i.e repeatString("money", 3) => "moneymoneymoney".
  */
 
+ function repeatString(str,times){
+    if(times < 0|| typeof str !== 'string'){
+        return null;
+    }else if(times === 1){
+        return str;
+    }else{
+        return str + repeatString(str,times - 1);
+    }
+ }
+ console.log(repeatString('hey',3));
 
 /**
  * Below here we see a module.exports which is set to an object with a bunch of keys.
@@ -114,5 +124,5 @@ module.exports = {
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
     timeConvert: timeConvert,
-    repeatString: null
+    repeatString: repeatString
 }
