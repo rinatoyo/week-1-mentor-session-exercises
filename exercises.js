@@ -66,6 +66,25 @@ console.log(vowelCount('steak'));
  * ie: 68 => 1:8
  */
 
+ function timeConvert(num){
+    let hours = 0;
+    let minutes = 0;
+    if(typeof num !== 'number'){
+        return null;
+    }else{
+        for(i=0; i <num; i++){
+            minutes++;
+            if(minutes >= 60){
+                hours++;
+                minutes -= 60;
+            }
+        }
+        return hours + ':' + minutes;
+    }
+ }
+
+ console.log(timeConvert(110));
+
  /** Function: repeatString
  * The function will take in two parameters and repeat a given string (first argument)
  * num times (second argument). Return an empty string if num is a negative number
@@ -94,6 +113,6 @@ module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
-    timeConvert: null,
+    timeConvert: timeConvert,
     repeatString: null
 }
