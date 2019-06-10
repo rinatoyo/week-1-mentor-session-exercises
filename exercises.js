@@ -40,6 +40,23 @@ console.log(firstReverse('Supercalifragilisticexpialidocious'));
  * ie: "oreo" => 3
  */
 
+function vowelCount(num){
+    let vowels = ["a","e","i","o","u"];
+    let number = 0;
+    if(typeof num !== 'string'){
+        return null;
+    }else{
+        for(let letter of num.toLowerCase()){
+            debugger;
+            if(vowels.includes(letter)){
+                number++;
+            }
+        }
+        return number;
+    }
+}
+console.log(vowelCount('steak'));
+
  /** Function: timeConvert
  * The function will take the str parameter representing the amount of minutes being passed in and
  * return the number of hours and minutes. Seperate the number of hours
@@ -76,7 +93,7 @@ console.log(firstReverse('Supercalifragilisticexpialidocious'));
 module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
-    vowelCount: null,
+    vowelCount: vowelCount,
     timeConvert: null,
     repeatString: null
 }
