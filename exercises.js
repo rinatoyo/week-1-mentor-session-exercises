@@ -23,6 +23,15 @@ console.log(firstReverse('Supercalifragilisticexpialidocious'));
  * ie: "cake" => "acek"
  */
 
+ function alphaOrder(str){
+     if(typeof str !== 'string'){
+         return null;
+     }else{
+         return str.split("").sort().join("");
+     }
+ }
+ console.log(alphaOrder('shiba inu'));
+
  /** Function: vowelCount
  * The function will take the num parameter being passed in and
  * return the number of vowels in the string
@@ -66,7 +75,7 @@ console.log(firstReverse('Supercalifragilisticexpialidocious'));
 
 module.exports = {
     firstReverse: firstReverse,
-    alphaOrder: null,
+    alphaOrder: alphaOrder,
     vowelCount: null,
     timeConvert: null,
     repeatString: null
